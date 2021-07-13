@@ -1,0 +1,31 @@
+<head>
+  <title>test-opt</title>
+</head>
+
+<body>
+  <h1>Testing a questionnaire</h1>
+
+  {{> optq}}
+</body>
+
+
+<template name="optq">
+{{> q t="You and your spouse make up after a fight" a1="I forgive him/her" a2="I am usually forgiving"}}
+{{> q t="You forget your spouse's birthday" a1="I am not good at remembering birthdays" a2="I was preoccupied with other things"}}
+</template>
+
+<template name="q">
+
+<p>{{t}}</p>
+
+<div>  
+  <input type="radio" name={{t}} id="a" value={{a1}} checked>
+    <label for="a">{{a1}}</label>
+</div>
+
+<div>  
+  <input type="radio" name={{t}} id="b" value={{a2}}>
+    <label for="b">{{a2}}</label>
+</div>
+
+</template>
